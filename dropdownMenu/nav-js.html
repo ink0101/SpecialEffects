@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>nav-js</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/navjs.css">
+	<script type="text/javascript">
+		function showSubMenu(li) {
+			var ul = li.getElementsByTagName('ul')[0];
+			ul.style.display = 'block';
+		}
+		function hideSubMenu(li) {
+			var ul = li.getElementsByTagName('ul')[0];
+			ul.style.display = 'none';
+		}
+	</script>
+</head>
+<body>
+	<div class="nav">
+		<ul class="level1">
+			<li>
+				<a href="#">
+					首页
+				</a>
+			</li>
+			<li onmouseover="showSubMenu(this);" onmouseout="hideSubMenu(this);">
+				<a href="#">
+					课程大厅
+				</a>
+				<ul class="level2">
+					<li><a href="#">JavaScript</a></li>
+					<li><a href="#">JQuery</a></li>
+				</ul>
+			</li>
+			<li onmouseover="showSubMenu(this);" onmouseout="hideSubMenu(this);">
+				<a href="#">
+					学习中心
+				</a>
+				<ul class="level2">
+					<li><a href="#">视频学习</a></li>
+					<li><a href="#">案例学习</a></li>
+					<li><a href="#">交流平台</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">
+					经典案例
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					关于我们
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

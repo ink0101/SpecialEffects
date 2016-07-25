@@ -9,7 +9,7 @@
 .public-header .header-logo a{
 	height: 54px;
 	width: 182px;
-	background: url(../img/index-logo.png);
+	background: url(../img/index-logo.png) no-repeat;
 }
 .public-header .header-nav{
 	float: right;
@@ -46,13 +46,13 @@
 	color: #fff;
 	line-height: 1.8;
 }
-.public-footer .footer-col:last-child{
+.public-footer .footer-col-nor{
 	margin-right: 0;
 }
 .public-footer .footer-col .footer-logo{
 	width: 182px;
 	height: 56px;
 	margin-top: -15px;
-	background: url(../img/footer-logo.png);
+	background: url(../img/footer-logo.png) no-repeat;
 	margin-bottom: 15px;
 }

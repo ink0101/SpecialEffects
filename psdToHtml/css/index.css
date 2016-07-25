@@ -31,7 +31,6 @@
 	width: 40px;
 	border-top: 1px solid #fff;
 	vertical-align: middle;
-	*margin-top: 22px;
 }
 .index-banner-text .text-info .line-l{
 	margin-right: 26px;
@@ -113,7 +112,6 @@
 	font-size: 14px;
 	color: #b7b7b7;
 	line-height: 32px;
-	*margin-top: 35px;
 }
 .index-menu .menu-more-btn .icon{
 	display: inline-block;
@@ -193,7 +191,7 @@
 	background-repeat: no-repeat;
 }
 .index-food-list .food-item .star-bar .nostar{
-	background-position: 0 -12px;
+	background-position: 0 -13px;
 }
 .index-pannel .index-pics{
 	height: 380px;

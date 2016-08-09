@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>nav-jquery</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/nav-jquery.js"></script>
+	<!-- <script>
+		$(function () {
+			$('.nav-menu').mouseover(function () {
+				$(this).children('ul').show();
+			})
+
+			$('.nav-menu').mouseout(function () {
+				$(this).children('ul').hide();
+			})
+		})
+
+	</script> -->
+</head>
+<body>
+	<div id="nav">
+		<ul class="level1">
+			<li><a href="#">首页</a></li>
+
+			<li class="nav-menu">
+			<a href="#">课程大厅</a>
+				<ul class="level2">
+					<li><a href="#">javascript</a></li>
+					<li><a href="#">jQuery</a></li>
+				</ul>
+			</li>
+
+			<li class="nav-menu">
+			<a href="#">学习中心</a>
+				<ul class="level2">
+					<li><a href="#">视频学习</a></li>
+					<li><a href="#">案例学习</a></li>
+					<li><a href="#">平台学习</a></li>
+				</ul>
+			</li>
+
+			<li><a href="#">经典案例</a></li>
+			<li><a href="#">关于我们</a></li>
+		</ul>
+	</div>
+	
+</body>
+</html>

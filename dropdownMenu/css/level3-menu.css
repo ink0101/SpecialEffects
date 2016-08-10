@@ -1,0 +1,39 @@
+body{behavior:url(csshover.htc);} 
+.navmenu{
+	font-size: 12px;
+	font-weight: bold;
+	overflow: auto;
+	margin: 20px 0;
+}
+.navmenu li{
+	float: left;
+	margin-right: 1px;
+}
+.navmenu li a{
+	width: 80px;
+	background-color: #ddd;
+	color: #666;
+	line-height: 20px;
+	display: block;
+	text-align: center;
+}
+.navmenu li a:hover{
+	background-color: #900;
+	color: #fff;
+}
+.navmenu .level2,.navmenu .level2 .level3{
+	display: none;
+}
+.navmenu .level2{
+	position: relative;
+}
+.navmenu li:hover ul{
+	display: block;
+	width: 80px;
+}
+.navmenu .level2 li:hover ul{
+	display: block;
+	position: absolute;
+	top: 1px;
+	left: 81px;
+}

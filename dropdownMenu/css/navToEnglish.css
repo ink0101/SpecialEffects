@@ -1,0 +1,30 @@
+.topnav{
+	margin: 20px auto;
+	border-bottom: 6px solid orange;
+	overflow: auto;
+	font-size: 12px;
+	font-weight: bold;
+}
+.topnav li{
+	float: left;
+	margin-right: 1px;
+}
+.topnav li a{
+	width: 80px;
+	display: block;
+	background-color: #ddd;
+	color: #666;
+	text-align: center;
+	line-height: 20px;
+}
+.topnav li a span{
+	display: none;
+}
+.topnav li a:hover{
+	margin-top: -20px;
+}
+.topnav li a:hover span{
+	display: block;
+	background-color: orange;
+	color: #fff;
+}

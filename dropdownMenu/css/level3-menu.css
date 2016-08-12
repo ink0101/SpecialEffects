@@ -1,7 +1,7 @@
 /*处理IE6兼容*/
-body{
+/*body{
 	behavior:url(csshover.htc);
-} 
+} */
 /*IE6中测试没用？*/
 .navmenu{
 	font-size: 12px;

@@ -5,6 +5,32 @@
 	<title>level3 menu</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/level3-menu.css">
+	<script type="text/javascript">
+		window.onload=function () {
+			// 相当于三元运算符，返回boolean值
+			var isIE = !!window.ActiveXObject;
+			var isIE6 = isIE&&!window.XMLHttpRequest;
+			if (isIE6) {
+				var Lis = document.getElementsByTagName('li');
+				for (var i = 0; i < Lis.length; i++) {
+					Lis[i].onmouseover = function(){
+						var ul = this.getElementsByTagName('ul')[0];
+						if (ul!= undefined) {
+							ul.style.display = "block";
+						}
+						
+					}
+					Lis[i].onmouseout = function(){
+						var ul = this.getElementsByTagName('ul')[0];
+						if (ul!= undefined) {
+							ul.style.display = "none";
+						}
+						
+					}
+				}
+			}
+		}
+	</script>
 </head>
 <body>
 	<ul class="navmenu">

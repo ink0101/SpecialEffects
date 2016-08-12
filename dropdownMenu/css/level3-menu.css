@@ -1,4 +1,8 @@
-body{behavior:url(csshover.htc);} 
+/*处理IE6兼容*/
+body{
+	behavior:url(csshover.htc);
+} 
+/*IE6中测试没用？*/
 .navmenu{
 	font-size: 12px;
 	font-weight: bold;
@@ -21,19 +25,21 @@ body{behavior:url(csshover.htc);}
 	background-color: #900;
 	color: #fff;
 }
+.navmenu .level2 li{
+	float: none;
+}
 .navmenu .level2,.navmenu .level2 .level3{
 	display: none;
 }
 .navmenu .level2{
 	position: relative;
-}
-.navmenu li:hover ul{
-	display: block;
 	width: 80px;
 }
-.navmenu .level2 li:hover ul{
-	display: block;
+.navmenu .level2 .level3{
 	position: absolute;
 	top: 1px;
 	left: 81px;
+}
+.navmenu li:hover ul,.navmenu .level2 li:hover ul{
+	display: block;
 }

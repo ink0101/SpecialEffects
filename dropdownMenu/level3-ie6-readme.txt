@@ -6,4 +6,4 @@ var ret = !!document.getElementById
 var ret = document.getElementById ? true : false;
 当值是非空字符串和非零数字返回true，当值是空字符串、0或者null返回false。
 
-2.	
+2.	test ssh

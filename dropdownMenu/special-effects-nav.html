@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>nav-special-effects</title>
+	
+	<style type="text/css">
+		a{
+			text-decoration: none;
+			color: #fff;
+		}
+		.navlist{
+			position: absolute;
+			top: 10px;
+		}
+		.navlist a{
+			margin-left: 60px;
+			color: #666;
+		}
+		.expand{
+			height: 0px;
+			background-color: #333d4d;
+			overflow: hidden;
+			position: relative;
+			top: 30px;
+			width: 100%;
+		}
+		.expdiv{
+			height: 130px;
+			/*???*/
+			width: 500%;
+		}
+		/*二级菜单的样式*/
+		.expdiv-list{
+			width: 20%;
+			float: left;
+			text-align: center;
+			line-height: 110px;
+			color: #fff;
+		}
+		/*二级菜单下拉按钮*/
+		.expand .close-btn{
+			width: 120px;
+			height: 20px;
+			/*雪碧图*/
+			background: url(img/broswer_home.png) no-repeat -13px -117px;
+			position: absolute;
+			left: 50%;
+			bottom: -2px;
+			margin-left: -60px;
+			/*鼠标呈手指的形状*/
+			cursor: pointer;
+		}
+	</style>
+	<!-- jquery版本问题可能会引起错误 如：$().on()方法无法使用-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#menuList').on('click','a',function () {
+
+				if ($(this).hasClass('btn-active')) {
+					$('#expandZone #closeBtn').click();
+					//阻止默认事件和冒泡事件,下边同理
+					return false;
+				}
+
+				// index():从匹配的元素中搜索给定元素的索引值，从0开始计数
+				// 可以得到现在是第几个超级链接被点击
+				var curIndex = $(this).index(),
+				// 计算出margin-left值
+				mlValue = '-' + curIndex*100 + '%';
+
+				if ($('#expandZone').hasClass('active')) {
+					$('#expandZone .expdiv').animate({marginLeft:mlValue});
+				}else{
+					//展开效果
+					$('#expandZone .expdiv').css({marginLeft:mlValue});
+					// 加上active类进行判断展开的状态
+					$('#expandZone').animate({height:'130px'}).addClass('active');
+
+				}
+
+				// 点击同一个一级菜单，关闭二级菜单效果
+				// 为点击的一级菜单加上btn-active类，同时删除兄弟元素的btn-active类
+				$(this).addClass('btn-active').siblings().removeClass('btn-active');
+
+				return false;
+				
+			})
+			// 关闭按钮的效果
+			$('#expandZone #closeBtn').on('click',function () {
+					$('#expandZone').animate({height:'0px'},function () {
+						$(this).removeClass('active');
+						$('#menuList .btn-active').removeClass('btn-active');
+					});
+					return false;
+				})
+		});
+	</script>
+</head>
+<body>
+	<div class="navlist" id="menuList">
+		<a href="#">首页</a>
+		<a href="#">课程大厅</a>
+		<a href="#">学习中心</a>
+		<a href="#">个人中心</a>
+		<a href="#">关于我们</a>
+	</div>
+	<div class="expand" id="expandZone">
+		<div class="expdiv">
+			<div class="expdiv-list">
+				<a href="#">慕课网主页</a>
+			</div>
+			<div class="expdiv-list">
+				<a href="#">前端课程</a>
+				<a href="#">手机开发</a>
+				<a href="#">后台编程</a>
+			</div>
+			<div class="expdiv-list">
+				<a href="#">JavaScript</a>
+				<a href="#">CSS</a>
+				<a href="#">JQuery</a>
+			</div>
+			<div class="expdiv-list">
+				个人信息：
+			</div>
+			<div class="expdiv-list">
+				公司地址：北京市西城区德外大街10号
+			</div>
+		</div>
+		<div class="close-btn" id="closeBtn"></div>
+	</div>
+</body>
+</html>
